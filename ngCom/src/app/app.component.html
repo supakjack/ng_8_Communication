@@ -1,0 +1,22 @@
+<!-- interpolation TS->HTML -->
+<h1>Angular Component Communication Demo</h1>
+<div>{{title}}</div>
+<div>{{version}}</div>
+<div>{{isProduct}}</div>
+<div>{{account | json}}</div>
+<div>{{getResult()}}</div>
+<div>time1 0f com1 : {{time1}}</div>
+<div>LoginStatus : {{shared.getState()}}</div>
+<!-- interpolation TS->HTML -->
+
+<hr>
+<button (click)="onClick()" >click</button>
+<button (click)="onClickViewChild()" >clickViewChild</button>
+
+<!-- Input : Parent -> Child (Property Binding)-->
+<app-com1 #com1 (change)="onChange1($event)" [count]="version"></app-com1>
+<!-- Input : Parent -> Child (Property Binding)-->
+
+<!-- Input : Parent -> Child (Property Binding)-->
+<app-com2 #com2 (reset)="onResetVersion()" [count2]="version"></app-com2>
+<!-- Input : Parent -> Child (Property Binding)-->
